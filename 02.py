@@ -6,9 +6,9 @@
 #By considering the terms in the Fibonacci sequence whose values do not exceed four million,
 #find the sum of the even-valued terms.
 
-a, b, c = 1, 0, 0
-while a < 4000000:
-	a, b = a+b, a
-	if  a % 2 == 0:
-		c += a
-print c
+numero, regra_fibonacci, soma_fibonacci = 1, 0, 0
+while numero < 400:#0000#
+	numero, regra_fibonacci = numero + regra_fibonacci, numero
+	if  numero % 2 == 0:
+        soma_fibonacci += numero
+print soma_fibonacci

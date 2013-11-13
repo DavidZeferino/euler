@@ -1,4 +1,4 @@
-def em_ingles(numeros):
+def listar_dicionarios(numeros):
 
     dic_numeros = {
         1: 'one',
@@ -67,12 +67,12 @@ def em_ingles(numeros):
 
     return saida
 
-def limpando_str(string):
+def limpar_str(string):
     string = string.replace(' ','')
     #string = string.replace('-','')
     return string
 
 #for i in range(0,1001):
-    #print em_ingles(i)
+    #print listar_dicionarios(i)
 
-print sum(len(limpando_str(em_ingles(i))) for i in range(1,1001))
+print sum(len(limpar_str(listar_dicionarios(numeros_em_extenso))) for numeros_em_extenso in range(1,1001))

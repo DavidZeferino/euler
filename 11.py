@@ -23,35 +23,31 @@ l.append("20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16")
 l.append("20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54")
 l.append("01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48")
 
-m = [i.split() for i in l]
-m = [[int(j)for j in i] for i in m]
+matriz = [i.split() for i in l]
+matriz = [[int(j)for j in i] for i in matriz]
 
-maximo = 0
+produto_maior = 0
 
 for i in range(20):
     for j in range(16):
       '''Produtos direta/equerda'''
-      prod = m[i][j] * m[i][j+1] * m[i][j+2] * m[i][j+3]
-      if prod > maximo:
-        maximo = prod
+      produto = matriz[i][j] * matriz[i][j+1] * matriz[i][j+2] * matriz[i][j+3]
+      if produto > produto_maior:
+        produto_maior = produto
       '''Produdos  cima/baixo'''
-      prod = m[j][i] * m[j+1][i] * m[j+2][i] * m[j+3][i]
-      if prod > maximo:
-        maximo = prod
+      produto = matriz[j][i] * matriz[j+1][i] * matriz[j+2][i] * matriz[j+3][i]
+      if produto > produto_maior:
+        produto_maior = produto
     '''Diagona'''    
     for i in range(16):
       for j in range(16):
-        prod = m[i][j] * m[i+1][j+1] * m[i+2][j+2] * m[i+3][j+3]
-        if prod > maximo:
-          maximo = prod
+        produto = matriz[i][j] * matriz[i+1][j+1] * matriz[i+2][j+2] * matriz[i+3][j+3]
+        if produto > produto_maior:
+          produto_maior = produto
     for i in range(3,20):
       for j in range(16):
-        prod = m[i][j] * m[i-1][j+1] * m[i-2][j+2] * m[i-3][j+3]
-        if prod > maximo:
-          maximo = prod
+        produto = matriz[i][j] * matriz[i-1][j+1] * matriz[i-2][j+2] * matriz[i-3][j+3]
+        if produto > produto_maior:
+          produto_maior = produto
 
-print (maximo)
-
-
-
-
+print (produto_maior)

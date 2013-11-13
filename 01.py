@@ -2,8 +2,8 @@
 ##The sum of these multiples is 23.###
 ##Find the sum of all the multiples of 3 or 5 below 1000##
 
-a = 0
-for i in range(1, 1000):
-	if i % 3 == 0 or i % 5 == 0:
-		a += i
-print a
+soma_dos_multiplos = 0
+for numeros_multiplos in range(1, 1000):
+	if numeros_multiplos % 3 == 0 or numbers % 5 == 0:
+		soma_dos_multiplos += numeros_multiplos
+print soma_dos_multiplos

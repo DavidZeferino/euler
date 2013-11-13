@@ -1,10 +1,11 @@
-s = 0 
-for i in range(999,100,-1):
-  for b in range(999,i,-1):
-    if i*b<s:
-      break
-    x = '%i'%(i*b)
-    if x==x[::-1]:
-      s = max(s,i*b)
-      break
-print s
+maior_palindromo = 0 
+for contagem_inversa_numero in range(999,0,-1):
+    for b in range(999,contagem_inversa_numero,-1):
+        print b
+        if contagem_inversa_numero * b < maior_palindromo:
+            break
+        palidromo = '%i'%(contagem_inversa_numero * b)
+        if palidromo==palidromo[::-1]:
+            maior_palindromo = max(maior_palindromo,contagem_inversa_numero * b)
+            break
+print maior_palindromo
